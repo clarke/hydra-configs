@@ -4,6 +4,8 @@
 
 ext.helpers = {}
 
+local defaultapplications = ext.config.applications
+
 -- This function positions windows based on the configuration in config.lua
 function ext.helpers.positionwindows()
   hydra.alert("Positioning Windows", 0.75)
@@ -49,5 +51,5 @@ function ext.helpers.launchdefaultapplications()
     end
   end
 
-  positionwindows()
+  ext.helpers.positionwindows()
 end
